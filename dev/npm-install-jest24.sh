@@ -80,6 +80,7 @@ listLib=$(
   cat <<EOF
 #handle .vue files?
 "vue-jest": "^2.6.0",
+"vue-template-compiler": "^2.5.2",
 EOF
 )
 install
