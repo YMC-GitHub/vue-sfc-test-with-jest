@@ -21,7 +21,7 @@ describe('MessageToggle.vue', () => {
   beforeEach(() => {
     jest.resetAllMocks();
   });
-  it('toggles msg passed to Message when button is clicked', () => {
+  it('test message toggle sfc before button is clicked', () => {
 
     //get some wrapper  by wrapper.find()
     const button = wrapper.find('#toggle-message')
@@ -91,11 +91,9 @@ describe('MessageToggle.vue', () => {
     //expect(MessageSFC.vm.msg).toBe('message')
     //check instance 's methord
     //expect(MessageSFC.props()).toEqual({ msg: 'message' })
-
-    //mock the sfc toggleMessage methord
-    //use jest.fn()
-    //mock the toggleMessage has been called
-    //:ok
+  })
+  /*
+  it('toggles msg passed to Message when button is clicked with jest mock', () => {
     const mockFn = jest.fn();
     wrapper.setMethods({
       toggleMessage: mockFn
@@ -110,20 +108,15 @@ describe('MessageToggle.vue', () => {
     expect(mockFn).toBeCalled();
     expect(mockFn).toHaveBeenCalledTimes(2);
 
-
-    //button.trigger('click');
-    //expect(MessageSFC.text()).toEqual('message')
-    //expect(MessageSFC.props()).toEqual({ msg: 'message' })
-    //expect(MessageSFC.vm.msg).toEqual('message')
-    //button.trigger('click')
-    //expect(MessageSFC.text()).toEqual('toggled message')
-    //expect(MessageSFC.props()).toEqual({ msg: 'toggled message' })
-    //expect(MessageSFC.vm.msg).toEqual('toggled message')
-
+  })
+  */
+  it('toggles msg passed to Message when button is clicked with Vue.nextTick', () => {
     //use Vue.nextTick()
     //get value from dom in fact
     //:ok
-    /*
+    //get some wrapper  by wrapper.find()
+    const button = wrapper.find('#toggle-message')
+    const MessageSFC = wrapper.find(Message)
     button.trigger('click');
     Vue.nextTick().then(function () {
       expect(MessageSFC.text()).toEqual('message')
@@ -136,11 +129,36 @@ describe('MessageToggle.vue', () => {
         expect(MessageSFC.vm.msg).toEqual('toggled message')
       })
     })
-    */
     //Vue.nextTick()
     //https://jestjs.io/docs/en/asynchronous#callbacks
     //or use flush-promises?
 
     //https://vue-test-utils.vuejs.org/guides/#getting-started
   })
+
+  /*
+  it('toggles msg passed to Message when button is clicked with asnc/await', async () => {
+    //use Vue.nextTick()
+    //get value from dom in fact
+    //:ok
+    //get some wrapper  by wrapper.find()
+    const button = wrapper.find('#toggle-message')
+    const MessageSFC = wrapper.find(Message)
+    button.trigger('click');
+    await Vue.nextTick()
+    expect(MessageSFC.text()).toEqual('message')
+    expect(MessageSFC.props()).toEqual({ msg: 'message' })
+    expect(MessageSFC.vm.msg).toEqual('message')
+    button.trigger('click');
+    await Vue.nextTick()
+    expect(MessageSFC.text()).toEqual('toggled message')
+    expect(MessageSFC.props()).toEqual({ msg: 'toggled message' })
+    expect(MessageSFC.vm.msg).toEqual('toggled message')
+    //Vue.nextTick()
+    //https://jestjs.io/docs/en/asynchronous#callbacks
+    //or use flush-promises?
+
+    //https://vue-test-utils.vuejs.org/guides/#getting-started
+  })
+  */
 })
