@@ -22,29 +22,29 @@ get detail [here](./note/dir-construtor.md)
 
 #### `jest.config.js`
 
-01.tell Jest to handle `*.vue` files ([jest.config.js](.test/unit//jest.config.js#L7))
+01.tell Jest to handle `*.vue` files ([jest.config.js](./test/unit/jest.config.js#L7))
 
 02.tell Jest to process `*.vue` files with `vue-jest` ([jest.config.js](./test/unit/jest.config.js#L22))
 
-03.tell Jest to snapshot tests for vue ([jest.config.js](.test/unit//jest.config.js#L26))
+03.tell Jest to snapshot tests for vue ([jest.config.js](./test/unit/jest.config.js#L26))
 
-04.tell Jest to handle `*.js` files ([jest.config.js](.test/unit//jest.config.js#L6))
+04.tell Jest to handle `*.js` files ([jest.config.js](./test/unit/jest.config.js#L6))
 
 05.tell Jest to process `*.js` files with `babel-jest` ([jest.config.js](./test/unit/jest.config.js#L20))
 
 06.tell Jest to support the same `@` -> `src` alias mapping in source code ([jest.config.js](./test/unit/jest.config.js#L12))
 
-07.tell Jest the project root dir ([jest.config.js](.test/unit//jest.config.js#L4))
+07.tell Jest the project root dir ([jest.config.js](./test/unit/jest.config.js#L4))
 
-08.tell Jest to support mock load static file ([jest.config.js](.test/unit//jest.config.js#L14))
+08.tell Jest to support mock load static file ([jest.config.js](.t/est/unit/jest.config.js#L14))
 
-09.tell Jest to support mock load style file ([jest.config.js](.test/unit//jest.config.js#L16))
+09.tell Jest to support mock load style file ([jest.config.js](.t/est/unit/jest.config.js#L16))
 
-10.tell Jest  which file to test ([jest.config.js](.test/unit//jest.config.js#L29-#34))
+10.tell Jest  which file to test ([jest.config.js](./test/unit/jest.config.js#L29-#34))
 
-11.tell Jest where to save coverage test ouput ([jest.config.js](.test/unit//jest.config.js#L36))
+11.tell Jest where to save coverage test ouput ([jest.config.js](.t/est/unit/jest.config.js#L36))
 
-12.tell Jest which file to coverage test ([jest.config.js](.test/unit//jest.config.js#L38-#L43))
+12.tell Jest which file to coverage test ([jest.config.js](./test/unit/jest.config.js#L38-#L43))
 
 
 
