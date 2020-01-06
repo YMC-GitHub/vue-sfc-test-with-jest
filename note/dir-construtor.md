@@ -12,6 +12,8 @@
 |--src #save the source code (for dev)
 |--test #save the test code (for tes)
 |--webpack.config.js #build the source files with webpack,and it's config file
+|--.babelrc #use babel to handle es6+,and it's config file
+|--__mocks__ #some mock handle file for jest test
 ```
 
 note:pro=production,dev=devlepment,tes=test
