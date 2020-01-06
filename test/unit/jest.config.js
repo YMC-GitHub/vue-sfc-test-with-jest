@@ -9,7 +9,7 @@ module.exports = {
     ],
     "moduleNameMapper": {
         // support the same @ -> src alias mapping in source code
-        "^@/(.*)$": "<rootDir>/src/$1",
+        '^@\/(.*?\.?(js|vue)?|)$': '<rootDir>/src/$1',
         // support mock load static file
         '\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$': '<rootDir>/test/unit/__mocks__/fileMock.js',
         // support mock load style file
@@ -28,7 +28,7 @@ module.exports = {
     //tell Jest  which file to test
     testMatch: [
         // match the test file
-        '<rootDir>/test/unit/*.spec.js'
+        '<rootDir>/test/unit/**/*.spec.js'
     ],
     testPathIgnorePatterns: [
     ],
