@@ -80,6 +80,7 @@ listLib=$(
   cat <<EOF
 #compiles es6+ down to ES5 by automatically determining the Babel plugins and polyfills ?
 "babel-plugin-transform-runtime": "^6.22.0",
+regenerator-runtime
 EOF
 )
 #install
@@ -89,9 +90,11 @@ listLib=$(
   cat <<EOF
 #compiles es6+ down to ES5 by automatically determining the Babel plugins and polyfills ?
 "babel-plugin-transform-runtime": "^6.22.0",
+#to be used as a runtime dependency along with the Babel plugin babel-plugin-transform-runtime
+regenerator-runtime
 EOF
 )
-#install
+install
 #uninstall && npm prune && npm ls --depth=0
 
 listLib=$(
