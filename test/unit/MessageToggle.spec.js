@@ -110,6 +110,7 @@ describe('MessageToggle.vue', () => {
 
   })
   */
+  /*
   it('toggles msg passed to Message when button is clicked with Vue.nextTick', () => {
     //use Vue.nextTick()
     //get value from dom in fact
@@ -135,8 +136,8 @@ describe('MessageToggle.vue', () => {
 
     //https://vue-test-utils.vuejs.org/guides/#getting-started
   })
+  */
 
-  /*
   it('toggles msg passed to Message when button is clicked with asnc/await', async () => {
     //use Vue.nextTick()
     //get value from dom in fact
@@ -160,5 +161,5 @@ describe('MessageToggle.vue', () => {
 
     //https://vue-test-utils.vuejs.org/guides/#getting-started
   })
-  */
+
 })
