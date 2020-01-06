@@ -59,13 +59,13 @@ EOF
 )
 
 #install
-: <<cmd
-source "$THIS_FILE_PATH/npm-install-babel6.sh"
-source "$THIS_FILE_PATH/npm-install-jest24.sh"
-source "$THIS_FILE_PATH/npm-install-webpack3.sh"
-source "$THIS_FILE_PATH/npm-install-vue2.sh"
-cmd
-
+hasThem="true"
+if [ "$hasThem" = "true" ]; then
+  source "$THIS_FILE_PATH/npm-install-babel6.sh"
+  source "$THIS_FILE_PATH/npm-install-jest24.sh"
+  source "$THIS_FILE_PATH/npm-install-webpack3.sh"
+  source "$THIS_FILE_PATH/npm-install-vue2.sh"
+fi
 listLib=$(
   cat <<EOF
 "cross-env": "^5.0.5",
