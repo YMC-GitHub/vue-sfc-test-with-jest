@@ -1,7 +1,7 @@
 const path = require('path');
 module.exports = {
     // tell Jest the project root dir
-    rootDir: path.resolve(__dirname, './'),
+    rootDir: path.resolve(__dirname, '../../'),
     "moduleFileExtensions": [
         "js",
         // tell Jest to handle `*.vue` files
@@ -11,9 +11,9 @@ module.exports = {
         // support the same @ -> src alias mapping in source code
         "^@/(.*)$": "<rootDir>/src/$1",
         // support mock load static file
-        '\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$': '<rootDir>/__mocks__/fileMock.js',
+        '\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$': '<rootDir>/test/unit/__mocks__/fileMock.js',
         // support mock load style file
-        '\\.(css|styl|less|sass|scss)$': '<rootDir>/_mocks__/styleMock.js'
+        '\\.(css|styl|less|sass|scss)$': '<rootDir>/test/unit/__mocks__/styleMock.js'
     },
     "transform": {
         // process `*.js` files with `babel-jest`
@@ -28,12 +28,12 @@ module.exports = {
     //tell Jest  which file to test
     testMatch: [
         // match the test file
-        '<rootDir>/test/*.spec.js'
+        '<rootDir>/test/unit/*.spec.js'
     ],
     testPathIgnorePatterns: [
     ],
     //tell Jest where to save coverage test ouput
-    coverageDirectory: '<rootDir>/coverage',
+    coverageDirectory: '<rootDir>/test/unit/coverage',
     //tell Jest which file to coverage test
     collectCoverageFrom: [
         // 'src/components/**/*.(js|vue)',
