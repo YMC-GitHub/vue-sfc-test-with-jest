@@ -1,5 +1,6 @@
 const path = require('path');
 module.exports = {
+    // tell Jest the project root dir
     rootDir: path.resolve(__dirname, './'),
     "moduleFileExtensions": [
         "js",
@@ -24,16 +25,16 @@ module.exports = {
         //for snapshot tests
         "<rootDir>/node_modules/jest-serializer-vue"
     ],
-    //which file to test
+    //tell Jest  which file to test
     testMatch: [
         // match the test file
         '<rootDir>/test/*.spec.js'
     ],
     testPathIgnorePatterns: [
     ],
-    //where to save coverage test ouput
+    //tell Jest where to save coverage test ouput
     coverageDirectory: '<rootDir>/coverage',
-    //which file to coverage test
+    //tell Jest which file to coverage test
     collectCoverageFrom: [
         // 'src/components/**/*.(js|vue)',
         'src/components/*.(vue)',
