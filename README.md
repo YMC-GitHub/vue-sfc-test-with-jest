@@ -6,19 +6,29 @@ test vue app sfc with jest
 
 note: you can also test your project with [Vue CLI 3](https://cli.vuejs.org/)
 
-### Additional Dependencies
+### some deps for test
 
-- `vue-test-utils`
-- `jest`
+- `vue-test-utils` (test vue with offical tool)
+- `jest` (test with jest framework)
 - `babel-jest` (for ES2015+ features in tests)
 - `vue-jest` (for handling `*.vue` files in tests)
 - `jest-serializer-vue` (for snapshot tests)
 
-### Additional Configuration
+### some config
 
 #### `jest.config.js`
 
-get detail on [jest.config.js](./jest.config.js#L1-#L21)
+01.tell Jest to handle `*.vue` files ([jest.config.js](./jest.config.js#L5))
+
+02.tell Jest to process `*.vue` files with `vue-jest` ([jest.config.js](./jest.config.js#L14))
+
+03.tell Jest to snapshot tests for vue ([jest.config.js](./jest.config.js#L20))
+
+04.tell Jest to handle `*.js` files ([jest.config.js](./jest.config.js#L3))
+
+05.tell Jest to process `*.js` files with `babel-jest` ([jest.config.js](./jest.config.js#L3))
+
+06.tell Jest to support the same `@` -> `src` alias mapping in source code ([jest.config.js](./jest.config.js#L9))
 
 
 #### `.babelrc`
@@ -36,25 +46,43 @@ To apply these options only for tests, we need to add a separate config under `e
 get detail on [.babelrc](./.babelrc#L6)
 
 
-
 ### Build Commands
 
 ``` bash
 # install dependencies
 npm install
+#install tes deps (esstional)
+#npm run install:tes
+#npm run install:tes:unit
+#install dev deps (optional)
+#npm run install:dev
+#install pro deps (optional)
+#npm run install:pro
 
-# serve with hot reload at localhost:8080
+# dev serve with hot reload at localhost:8080 (optional)
 npm run dev
 
-# build for production with minification
-npm run buildu
+# build for production with minification (optional)
+npm run build
 
 # run tests
 npm test
 #npm test -- -u
+#run unit test
+#npm run test:unit
 ```
 
-For detailed explanation on how things work, consult the [docs for vue-test-utils](https://vue-test-utils.vuejs.org/guides/#testing-single-file-components-with-jest).
+### get more
+
+For detailed explanation on how vue-test-utils work, consult the [docs for vue-test-utils](https://vue-test-utils.vuejs.org/guides/#testing-single-file-components-with-jest).
+
+For detailed explanation on how jest work, consult the [docs for jest]().
+
+For detailed explanation on how jest-babel work, consult the [docs for jest-babel]().
+
+For detailed explanation on how vue-jest work, consult the [docs for vue-jest]().
+
+For detailed explanation on how jest-serializer-vue work, consult the [docs for jest-serializer-vue]().
 
 
 ### author
@@ -64,7 +92,6 @@ yemiancheng <ymc-github@gmail.com>
 ### contributor
 
 Evan You <yyx990803@gmail.com>
-
 
 ### License
 
