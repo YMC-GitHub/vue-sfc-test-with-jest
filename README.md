@@ -6,6 +6,10 @@ test vue app sfc with jest
 
 note: you can also test your project with [Vue CLI 3](https://cli.vuejs.org/)
 
+### project diretory constructor
+
+get detail [here](./note/dir-construtor.md)
+
 ### some deps for test
 
 - `vue-test-utils` (test vue with offical tool)
