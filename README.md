@@ -50,17 +50,15 @@ get detail [here](./note/dir-construtor.md)
 
 #### `.babelrc`
 
-Our default Babel config disables ES modules transpilation because webpack already knows how to handle ES modules. However, we do need to enable it for our tests because Jest tests are run directly in Node.
-
-get detail on [.babelrc](./.babelrc#L1-#L4)
+Our default Babel config disables ES modules transpilation because webpack already knows how to handle ES modules(./.babelrc#L5). However, we do need to enable it for our tests because Jest tests are run directly in Node[.babelrc](./.babelrc#L13-#L20).
 
 Also, if our tests are run in a relatively newer version of Node, most of the ES features are already supported - we can tell `babel-preset-env` to target the Node version we are using. This skips transpiling unnecessary features and makes our tests boot faster.
 
-get detail on [.babelrc](./.babelrc#L8)
+get detail on [.babelrc](./.babelrc#L17)
 
 To apply these options only for tests, we need to add a separate config under `env.test` (this will be automatically picked up by `babel-jest`):
 
-get detail on [.babelrc](./.babelrc#L6)
+get detail on [.babelrc](./.babelrc#L11)
 
 
 ### Build Commands
